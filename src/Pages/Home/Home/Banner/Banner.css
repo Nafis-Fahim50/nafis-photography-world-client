@@ -1,0 +1,9 @@
+.banner-margin{
+    margin-right: 750px;
+}
+
+@media only screen and (max-width: 990px) {
+   .banner-margin{
+    margin-right: 0;
+   }
+}
