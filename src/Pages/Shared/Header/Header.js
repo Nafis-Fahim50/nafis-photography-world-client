@@ -14,8 +14,6 @@ const Header = () => {
             <Link to='/about'>About</Link>
             <Link to='/photography'>Photography</Link>
             <Link to='/hire'>Hire Me</Link>
-            <Link to='/category'>Category</Link>
-            <Link to='/event'>Event</Link>
             <Link to='/contact'>Contact</Link>
             <Link to='/login'>Login</Link>
             <select data-choose-theme>
