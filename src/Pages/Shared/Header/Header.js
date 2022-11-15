@@ -1,16 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; import { useEffect } from 'react'
+import { themeChange } from 'theme-change'
+import './Header.css'
 
 const Header = () => {
+    useEffect(() => {
+        themeChange(false)
+    }, [])
+
     const menuItems = <>
         <li>
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
             <Link to='/photography'>Photography</Link>
+            <Link to='/hire'>Hire Me</Link>
             <Link to='/category'>Category</Link>
             <Link to='/event'>Event</Link>
             <Link to='/contact'>Contact</Link>
             <Link to='/login'>Login</Link>
+            <select data-choose-theme>
+                <option value="">Light</option>
+                <option value="dark">Dark</option>
+            </select>
         </li>
     </>
     return (
