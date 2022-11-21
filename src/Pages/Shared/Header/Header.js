@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'; import { useEffect } from 'react'
 import { themeChange } from 'theme-change'
 import './Header.css'
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const {user,logOut} = useContext(AuthContext)
     useEffect(() => {
         themeChange(false)
     }, [])
@@ -15,7 +17,12 @@ const Header = () => {
             <Link to='/photography'>Photography</Link>
             <Link to='/hire'>Hire Me</Link>
             <Link to='/contact'>Contact</Link>
-            <Link to='/login'>Login</Link>
+            {
+                user?.uid ?
+                <Link to='/login'><button onClick={logOut} className='p-3 bg-red-500 rounded'>Logout</button></Link>
+                :
+                <Link to='/login'>Login</Link>
+            }
             <select data-choose-theme>
                 <option value="">Light</option>
                 <option value="dark">Dark</option>
