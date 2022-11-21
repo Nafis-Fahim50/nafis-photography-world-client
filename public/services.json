@@ -1,6 +1,5 @@
 [
     {
-      "_id": 1,
       "name": "Street Photography",
 	  "img":"https://i.ibb.co/KDszR8k/Whats-App-Image-2022-11-15-at-11-55-19-AM.jpg",
       "slots": [
@@ -23,8 +22,7 @@
       ]
     },
     {
-      "_id": 2,
-      "name": "Flower Photography",
+    "name": "Flower Photography",
 	  "img":"https://i.ibb.co/10GS14T/Picsart-22-06-22-22-50-02-861.jpg",
       "slots": [
         "08.00 AM - 08.30 AM",
@@ -46,7 +44,6 @@
       ]
     },
     {
-      "_id": 3,
       "name": "Portrait Photography",
 	  "img":"https://i.ibb.co/ryt2jRj/Pics-Art-10-01-11-14-52.jpg",
       "slots": [
@@ -69,7 +66,6 @@
       ]
     },
     {
-      "_id": 4,
       "name": "Editorial Photography",
 	  "img":"https://i.ibb.co/fvWr9Fq/Picsart-22-04-01-22-35-29-579.jpg",
       "slots": [
@@ -92,14 +88,12 @@
       ]
     },
     {
-      "_id": 5,
       "name": "Fashion Photography",
 	  "img":"https://i.ibb.co/S6gSDJP/Picsart-22-10-23-12-14-49-565.jpg",
       "slots": [
       ]
     },
     {
-      "_id": 6,
       "name": "Photojournalism",
 	  "img":"https://i.ibb.co/NjzNd9Z/Picsart-22-09-16-20-40-04-060.jpg",
       "slots": [

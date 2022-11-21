@@ -6,7 +6,7 @@ const HireServices = ({selectedDate}) => {
     const [services, setServices] = useState([]);
     const [hireService, setHireService] = useState(null);
     useEffect(() => {
-        fetch('services.json')
+        fetch('http://localhost:5000/hireOptions')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

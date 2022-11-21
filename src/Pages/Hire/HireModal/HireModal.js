@@ -4,20 +4,7 @@ import toast from 'react-hot-toast';
 
 const HireModal = ({ hireService, setHireService, selectedDate }) => {
     const { name, slots } = hireService;
-
-    let footer = <p>Please pick the first day.</p>;
-    if (selectedDate?.from) {
-        if (!selectedDate.to) {
-            footer = <p>{format(selectedDate.from, 'PPP')}</p>;
-        } else if (selectedDate.to) {
-            footer = (
-                <p>
-                    {format(selectedDate.from, 'PP')} – {format(selectedDate.to, 'PP')}
-                </p>
-            );
-        }
-    }
-
+    const date = format(selectedDate,'PP')
     const handleBooking = event =>{
         event.preventDefault();
         const form = event.target;
@@ -27,7 +14,7 @@ const HireModal = ({ hireService, setHireService, selectedDate }) => {
         const email = form.email.value;
 
         const booking = {
-            appointmentDate: footer,
+            appointmentDate: date,
             PhotographyName: name,
             Customer: customerName,
             slot,
@@ -46,8 +33,8 @@ const HireModal = ({ hireService, setHireService, selectedDate }) => {
                 <div className="modal-box relative">
                     <label htmlFor="hire-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold">{name}</h3>
-                    <h3 className='text-slate-400'>{footer}</h3>
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
+                    <input name='name' value={date} disabled type="text" placeholder="Full Name" className="input input-bordered  input-md  w-full max-w-full" />
                         <select name='slot' className="select bg-gray-200 w-full">
                             {
                                 slots.map((slot, i) => <option
